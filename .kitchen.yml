@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt-periodic::default]
+    attributes:
+      apt_periodic:
+        unattended_upgrade_interval: "1"
+        unattended_upgrades:
+          mail: "admin@crazy-automation.io"
