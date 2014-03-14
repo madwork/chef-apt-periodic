@@ -27,7 +27,7 @@
 include_recipe "apt"
 
 template "/etc/apt/apt.conf.d/10periodic" do
-  source "10periodic"
+  source "10periodic.erb"
   owner "root"
   group "root"
   mode "0644"
@@ -36,10 +36,10 @@ end
 if node['apt_periodic']['unattended_upgrade_interval'].to_i >= 1
 
   package "unattended-upgrades"
-  package "mailutils" unless node['unattended_upgrades']['mail'].empty?
+  package "mailutils" unless node['apt_periodic']['unattended_upgrades']['mail'].empty?
 
   template "/etc/apt/apt.conf.d/50unattended-upgrades" do
-    source "50unattended-upgrades"
+    source "50unattended-upgrades.erb"
     owner "root"
     group "root"
     mode "0644"
