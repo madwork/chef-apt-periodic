@@ -1,0 +1,17 @@
+Unattended-Upgrade::Allowed-Origins {
+<% node['apt_periodic']['unattended_upgrades']['allowed_origins'].each do |origin| %>
+  "<%= origin %>";
+<% end %>
+};
+Unattended-Upgrade::Package-Blacklist {
+<% node['apt_periodic']['unattended_upgrades']['package_blacklist'].each do |package| %>
+  "<%= package %>";
+<% end %>
+};
+Unattended-Upgrade::AutoFixInterruptedDpkg "<%= node['apt_periodic']['unattended_upgrades']['auto_fix_interrupted_dpkg'] %>";
+Unattended-Upgrade::MinimalSteps "<%= node['apt_periodic']['unattended_upgrades']['minimal_steps'] %>";
+Unattended-Upgrade::InstallOnShutdown "<%= node['apt_periodic']['unattended_upgrades']['install_on_shutdown'] %>";
+<%= "Unattended-Upgrade::Mail \"#{node['apt_periodic']['unattended_upgrades']['mail']}\";" unless node['apt_periodic']['unattended_upgrades']['mail'].empty? %>
+Unattended-Upgrade::MailOnlyOnError "<%= node['apt_periodic']['unattended_upgrades']['mail_only_on_error'] %>";
+Unattended-Upgrade::Remove-Unused-Dependencies "<%= node['apt_periodic']['unattended_upgrades']['remove_unused_dependencies'] %>";
+Unattended-Upgrade::Automatic-Reboot "<%= node['apt_periodic']['unattended_upgrades']['automatic_reboot'] %>";
