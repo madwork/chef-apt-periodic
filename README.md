@@ -1,6 +1,6 @@
 # APT::Periodic Cookbook
 
-Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/etc/cron.daily/apt` and `unattended-upgrades` package on Ubuntu.
+Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/etc/cron.daily/apt` and [unattended-upgrades](http://packages.ubuntu.com/precise/unattended-upgrades) package on Ubuntu.
 
 - `/etc/apt/apt.conf.d/10periodic`
 - `/etc/apt/apt.conf.d/50unattended-upgrades`
@@ -39,12 +39,11 @@ Install the cookbooks you specified in the Berksfile and their dependencies
 
 	$ berks install
 
-
 ## Attributes
 
 #### apt-periodic::default
 
-See `attributes/default.rb`
+See [attributes/default.rb](attributes/default.rb)
 
 <table>
   <tr>
@@ -258,7 +257,7 @@ Example with unattended upgrades every days and notification by mail:
 #### Dependencies
 
 * [bundler](http://bundler.io/)
-* [vagrant](www.vagrantup.com/)
+* [vagrant](https://www.vagrantup.com/)
 * [kitchen-vagrant](https://github.com/test-kitchen/kitchen-vagrant)
 * [berkshelf](http://berkshelf.com/)
 
