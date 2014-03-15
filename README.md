@@ -15,6 +15,11 @@ Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/e
 
 - `apt`
 
+## Installation
+
+    cookbook 'apt'
+    cookbook 'apt-periodic'
+
 ## Attributes
 
 #### apt-periodic::default
