@@ -234,7 +234,9 @@ See `attributes/default.rb`
 
 #### apt-periodic::default
 
-Just include `apt-periodic` in your node's `run_list`:
+Just include `apt-periodic` in your node's `run_list` and override default values if needed.
+
+Example with unattended upgrades every days and notification by mail:
 
 ```json
 {
@@ -251,6 +253,26 @@ Just include `apt-periodic` in your node's `run_list`:
 }
 ```
 
+## Development
+
+#### Dependencies
+
+* [bundler](http://bundler.io/)
+* [vagrant](www.vagrantup.com/)
+* [kitchen-vagrant](https://github.com/test-kitchen/kitchen-vagrant)
+* [berkshelf](http://berkshelf.com/)
+
+#### Installation
+
+Ensure the gem dependencies are installed:
+
+	$ bundle install
+	$ bundle exec berks install
+
+Running the tests:
+
+	$ bundle exec kitchen test
+
 ## Contributing
 
 1. Fork the repository on Github
@@ -259,3 +281,9 @@ Just include `apt-periodic` in your node's `run_list`:
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request using Github
+
+## License
+
+Written by [Vincent Durand](https://github.com/madwork).
+
+Released under the terms of the MIT License. For further information, please see the file [LICENSE.txt](LICENSE.txt).
