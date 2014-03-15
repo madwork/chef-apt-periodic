@@ -15,10 +15,30 @@ Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/e
 
 - `apt`
 
-## Installation
+## Installation with [librarian-chef](https://github.com/applicationsonline/librarian-chef)
 
-    cookbook 'apt'
+Edit `Cheffile`
+
+    site "http://community.opscode.com/api/v1"
+
     cookbook 'apt-periodic'
+
+Resolves and installs all of the dependencies
+
+	$ librarian-chef install
+
+## Installation with [berkshelf](http://berkshelf.com/)
+
+Edit `Berksfile`
+
+	site :opscode
+
+	cookbook 'apt-periodic'
+
+Install the cookbooks you specified in the Berksfile and their dependencies
+
+	$ berks install
+
 
 ## Attributes
 
