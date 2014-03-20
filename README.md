@@ -15,7 +15,17 @@ Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/e
 
 - `apt`
 
-## Installation with [librarian-chef](https://github.com/applicationsonline/librarian-chef)
+## Installation
+
+### From the [Community Site](http://community.opscode.com/cookbooks/apt-periodic)
+
+Use the knife command:
+
+```sh
+$ knife cookbook site install apt-periodic
+```
+
+### With [librarian-chef](https://github.com/applicationsonline/librarian-chef)
 
 Edit `Cheffile`
 
@@ -23,11 +33,13 @@ Edit `Cheffile`
 
     cookbook 'apt-periodic'
 
-Resolves and installs all of the dependencies
+Resolves and installs all of the dependencies:
 
-	$ librarian-chef install
+```sh
+$ librarian-chef install
+```
 
-## Installation with [berkshelf](http://berkshelf.com/)
+### With [berkshelf](http://berkshelf.com/)
 
 Edit `Berksfile`
 
@@ -35,9 +47,11 @@ Edit `Berksfile`
 
 	cookbook 'apt-periodic'
 
-Install the cookbooks you specified in the Berksfile and their dependencies
+Install the cookbooks you specified in the Berksfile and their dependencies:
 
-	$ berks install
+```sh
+$ berks install
+```
 
 ## Attributes
 
@@ -245,7 +259,7 @@ Example with unattended upgrades every days and notification by mail:
     "unattended_upgrades": {
       "mail": "admin@crazy-automation.io"
     }
-  }
+  },
   "run_list": [
     "recipe[apt-periodic]"
   ]
@@ -265,12 +279,16 @@ Example with unattended upgrades every days and notification by mail:
 
 Ensure the gem dependencies are installed:
 
-	$ bundle install
-	$ bundle exec berks install
+```sh
+$ bundle install
+$ bundle exec berks install
+```
 
 Running the tests:
 
-	$ bundle exec kitchen test
+```sh
+$ bundle exec kitchen test
+```
 
 ## Contributing
 
