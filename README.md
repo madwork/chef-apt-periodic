@@ -29,9 +29,9 @@ $ knife cookbook site install apt-periodic
 
 Edit `Cheffile`
 
-    site "http://community.opscode.com/api/v1"
+    site "https://supermarket.getchef.com/api/v1"
 
-    cookbook 'apt-periodic'
+    cookbook 'apt-periodic', '~> 0.1.1
 
 Resolves and installs all of the dependencies:
 
@@ -43,9 +43,9 @@ $ librarian-chef install
 
 Edit `Berksfile`
 
-	site :opscode
+	source "https://supermarket.getchef.com"
 
-	cookbook 'apt-periodic'
+	cookbook 'apt-periodic', '~> 0.1.1
 
 Install the cookbooks you specified in the Berksfile and their dependencies:
 
@@ -287,6 +287,7 @@ $ bundle exec berks install
 Running the tests:
 
 ```sh
+$ bundle exec rspec
 $ bundle exec kitchen test
 ```
 
