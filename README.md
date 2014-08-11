@@ -17,7 +17,7 @@ Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/e
 
 ## Installation
 
-### From the [Community Site](http://community.opscode.com/cookbooks/apt-periodic)
+### From the [Community Site](https://supermarket.getchef.com/cookbooks/apt-periodic)
 
 Use the knife command:
 
