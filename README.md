@@ -1,5 +1,8 @@
 # APT::Periodic Cookbook
 
+[![Build Status](https://travis-ci.org/madwork/chef-apt-periodic.png)](https://travis-ci.org/madwork/chef-apt-periodic)
+[![Cookbook Version](https://img.shields.io/cookbook/v/apt-periodic.svg)](https://supermarket.getchef.com/cookbooks/apt-periodic)
+
 Chef cookbook for configuring **APT::Periodic** variables for daily cron job `/etc/cron.daily/apt` and [unattended-upgrades](http://packages.ubuntu.com/precise/unattended-upgrades) package on Ubuntu.
 
 - `/etc/apt/apt.conf.d/10periodic`
