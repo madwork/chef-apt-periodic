@@ -34,7 +34,7 @@ Edit `Cheffile`
 
     site "https://supermarket.getchef.com/api/v1"
 
-    cookbook 'apt-periodic', '~> 0.1.1
+    cookbook 'apt-periodic', '~> 0.2.0'
 
 Resolves and installs all of the dependencies:
 
@@ -48,7 +48,7 @@ Edit `Berksfile`
 
 	source "https://supermarket.getchef.com"
 
-	cookbook 'apt-periodic', '~> 0.1.1
+	cookbook 'apt-periodic', '~> 0.2.0'
 
 Install the cookbooks you specified in the Berksfile and their dependencies:
 
